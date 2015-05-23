@@ -47,6 +47,7 @@ export default Ember.Component.extend({
     'paragraphize',
     'pastePlainText',
     'placeholder',
+    'plugins',
     'preSpaces',
     'removeComments',
     'removeDataAttr',
