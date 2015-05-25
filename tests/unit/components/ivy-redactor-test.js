@@ -46,7 +46,7 @@ function optionTest(key, value) {
     props[key] = value;
     var component = this.subject(props);
     this.append();
-
+    
     var redactor = component.$().redactor('core.getObject');
     assert.deepEqual(redactor.opts[key], value, 'value of ' + key + ' option is correct');
   });
@@ -80,6 +80,7 @@ optionTest('minHeight', 500);
 optionTest('paragraphize', false);
 optionTest('pastePlainText', true);
 optionTest('placeholder', 'Your text here...');
+optionTest('plugins',['video']);
 optionTest('preSpaces', 2);
 optionTest('removeComments', true);
 optionTest('removeDataAttr', true);
@@ -110,8 +111,7 @@ optionDefaultTest('activeButtons', ['deleted', 'italic', 'bold', 'underline', 'u
 optionDefaultTest('activeButtonsStates', { b: 'bold', strong: 'bold', i: 'italic', em: 'italic', del: 'deleted', strike: 'deleted', ul: 'unorderedlist', ol: 'orderedlist', u: 'underline' });
 optionDefaultTest('allowedAttr', false);
 optionDefaultTest('allowedTags', false);
-optionDefaultTest('buttonSource', false);
-optionDefaultTest('buttons', ['formatting', 'bold', 'italic', 'deleted', 'unorderedlist', 'orderedlist', 'outdent', 'indent', 'image', 'file', 'link', 'alignment', 'horizontalrule']);
+optionDefaultTest('buttons', ['html','formatting', 'bold', 'italic', 'deleted', 'unorderedlist', 'orderedlist', 'outdent', 'indent', 'image', 'file', 'link', 'alignment', 'horizontalrule']);
 optionDefaultTest('buttonsHide', []);
 optionDefaultTest('buttonsHideOnMobile', []);
 optionDefaultTest('cleanOnPaste', true);
@@ -134,6 +134,7 @@ optionDefaultTest('minHeight', false);
 optionDefaultTest('paragraphize', true);
 optionDefaultTest('pastePlainText', false);
 optionDefaultTest('placeholder', false);
+optionDefaultTest('plugins', false);
 optionDefaultTest('preSpaces', 4);
 optionDefaultTest('removeComments', false);
 optionDefaultTest('removeDataAttr', false);

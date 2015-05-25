@@ -19,6 +19,7 @@ var app = new EmberAddon();
 // please specify an object with the list of modules as keys
 // along with the exports of each module as its value.
 app.import('vendor/redactor/redactor-font.eot');
+app.import('vendor/redactor/plugins/video.js');
 app.import('vendor/redactor/redactor.css');
 app.import('vendor/redactor/redactor.js');
 
